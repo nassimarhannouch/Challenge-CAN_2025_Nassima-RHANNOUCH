@@ -1,0 +1,507 @@
+/* src/App.css - Design Girly & Elegant 💕✨ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #ffeef8 0%, #ffe5f5 25%, #f3e5ff 50%, #e5f0ff 75%, #fff0f5 100%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* ==================== SCROLLBAR ROSE & SPARKLE ==================== */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 192, 203, 0.2);
+  border-radius: 10px;
+  margin: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff69b4, #ff1493, #ff69b4);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 192, 203, 0.3);
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff1493, #c71585, #ff1493);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #ff69b4 rgba(255, 192, 203, 0.2);
+}
+
+/* ==================== ANIMATIONS MAGIQUES ==================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.animate-bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ==================== TRANSITIONS DOUCES ==================== */
+
+button, 
+input, 
+a,
+.transition-all {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ==================== FOCUS ROSE ==================== */
+
+*:focus-visible {
+  outline: 2px solid #ff69b4;
+  outline-offset: 2px;
+  border-radius: 1rem;
+}
+
+button:focus-visible {
+  outline: 2px solid #ff1493;
+  outline-offset: 3px;
+}
+
+/* ==================== HOVER EFFECTS SPARKLE ==================== */
+
+button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(255, 105, 180, 0.4), 0 5px 15px rgba(255, 20, 147, 0.2);
+}
+
+button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* ==================== CARD EFFECTS ==================== */
+
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(255, 105, 180, 0.3), 0 10px 20px rgba(255, 20, 147, 0.15);
+}
+
+/* ==================== GRADIENT ROSE & VIOLET ==================== */
+
+.gradient-text {
+  background: linear-gradient(135deg, #ff69b4, #ff1493, #da70d6, #ba55d3, #ff69b4);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(135deg, #fff5f7, #ffe9f0);
+  border-radius: 1.5rem;
+  padding: 2px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 2px;
+  background: linear-gradient(135deg, #ff69b4, #ff1493, #da70d6);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* ==================== LOADING STATES ROSE ==================== */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 182, 193, 0.1) 25%,
+    rgba(255, 182, 193, 0.2) 50%,
+    rgba(255, 182, 193, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ==================== TYPING INDICATOR ==================== */
+
+.typing-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: typing 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .lg\:col-span-1,
+  .lg\:col-span-2,
+  .lg\:col-span-3,
+  .lg\:col-span-4 {
+    grid-column: span 1 / span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .p-6 {
+    padding: 1rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+}
+
+/* ==================== UTILITIES GIRLY ==================== */
+
+.backdrop-blur-custom {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 105, 180, 0.2);
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.1);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.4), 0 0 60px rgba(255, 20, 147, 0.2);
+}
+
+.shadow-glow-purple {
+  box-shadow: 0 0 30px rgba(218, 112, 214, 0.4), 0 0 60px rgba(186, 85, 211, 0.2);
+}
+
+/* ==================== MESSAGE BUBBLES ==================== */
+
+.message-bubble {
+  position: relative;
+  padding: 1.25rem 1.75rem;
+  border-radius: 2rem;
+  max-width: 85%;
+  word-wrap: break-word;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+}
+
+.message-bubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.message-bubble.user::after {
+  right: -10px;
+  top: 15px;
+  border-width: 10px 0 0 10px;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.message-bubble.assistant::after {
+  left: -10px;
+  top: 15px;
+  border-width: 0 10px 10px 0;
+  border-color: transparent currentColor transparent transparent;
+}
+
+/* ==================== PRINT STYLES ==================== */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* ==================== SELECTION ROSE ==================== */
+
+::selection {
+  background: rgba(255, 105, 180, 0.4);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(255, 105, 180, 0.4);
+  color: white;
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ==================== DARK MODE ROSE ==================== */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color-scheme: dark;
+    background: linear-gradient(135deg, #2d1b2e 0%, #3d1e3f 25%, #4a1e4a 50%, #3d1e4f 75%, #2e1b2e 100%);
+  }
+}
+
+/* ==================== PERFORMANCE ==================== */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* ==================== SPECIAL GIRLY EFFECTS ==================== */
+
+.shimmer {
+  background: linear-gradient(
+    to right,
+    rgba(255, 182, 193, 0.2) 0%,
+    rgba(255, 105, 180, 0.4) 50%,
+    rgba(255, 182, 193, 0.2) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+.glow-pink {
+  box-shadow: 
+    0 0 10px rgba(255, 105, 180, 0.5),
+    0 0 20px rgba(255, 105, 180, 0.3),
+    0 0 30px rgba(255, 105, 180, 0.2);
+}
+
+.glow-purple {
+  box-shadow: 
+    0 0 10px rgba(218, 112, 214, 0.5),
+    0 0 20px rgba(218, 112, 214, 0.3),
+    0 0 30px rgba(218, 112, 214, 0.2);
+}
+
+/* Hearts decoration */
+.hearts-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.hearts-bg::before {
+  content: '💕';
+  position: absolute;
+  font-size: 20px;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hearts-bg::after {
+  content: '✨';
+  position: absolute;
+  font-size: 16px;
+  opacity: 0.15;
+  right: 20px;
+  animation: sparkle 4s ease-in-out infinite;
+}
