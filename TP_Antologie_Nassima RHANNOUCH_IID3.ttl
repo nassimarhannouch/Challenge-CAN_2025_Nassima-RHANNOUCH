@@ -1,0 +1,63 @@
+@prefix : <http://example.org/university#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+####################
+# Classes
+####################
+
+:Course rdf:type owl:Class .
+
+:LaboratoryCourse rdf:type owl:Class ;
+    rdfs:subClassOf :Course .
+
+:Homework rdf:type owl:Class .
+
+:Teacher rdf:type owl:Class .
+
+:Professor rdf:type owl:Class ;
+    rdfs:subClassOf :Teacher .
+
+:Assistant rdf:type owl:Class ;
+    rdfs:subClassOf :Teacher .
+
+####################
+# Disjoint classes
+####################
+
+:Professor owl:disjointWith :Assistant .
+
+####################
+# Object Properties
+####################
+
+:hasHomework rdf:type owl:ObjectProperty ;
+    rdfs:domain :Course ;
+    rdfs:range :Homework .
+
+:organizedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain :Course ;
+    rdfs:range :Teacher .
+
+:teaches rdf:type owl:ObjectProperty ;
+    rdfs:domain :Teacher ;
+    rdfs:range :Course .
+
+####################
+# Restrictions
+####################
+
+# Professors teach courses
+:Professor rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :teaches ;
+    owl:someValuesFrom :Course
+] .
+
+# Assistants teach ONLY laboratory courses
+:Assistant rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :teaches ;
+    owl:allValuesFrom :LaboratoryCourse
+] .
